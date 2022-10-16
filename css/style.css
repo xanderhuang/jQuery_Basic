@@ -1,0 +1,29 @@
+#first {
+    background-image: url("assets/hamburg.jpg");
+    /* background-image: url("assets/hamburg_black.jpg"); */
+    /* background-image: url("assets/sizihbay_painting.jpg"); */
+    /* background-image: url("assets/tram_cold.JPG"); */
+    min-height: 1200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%) blur(5px);
+}
+
+#second {
+    background-image: url("assets/hamburg.jpg");
+    /* background-image: url("assets/sizihbay.jpg"); */
+    /* background-image: url("assets/tram.jpg"); */
+    min-height: 1200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Fredericka the Great", "Lucida Grande", Helvetica, "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Arial, sans-serif;
+}

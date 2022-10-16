@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #section1 div:first-child {
+            background-image: url("https://p4css.github.io/webScroll/assets/pingtong01.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #section2 div:first-child {
+            background-image: url("https://p4css.github.io/webScroll/assets/pingtong02.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #section3 div:first-child {
+            background-image: url("https://p4css.github.io/webScroll/assets/pingtong03.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #section4 div:first-child {
+            background-image: url("https://p4css.github.io/webScroll/assets/pingtong04.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <title>Controlling audience reading time</title>
+</head>
+
+<body>
+    <section class="container-fluid" style="display:flex;height:500px;background-color:dodgerblue; color:white;">
+        <div class="row" style="align-self:flex-end">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <p>以往，是圖像或影像的長度決定讀者花多少時間來捲對它。圖片越長、讀者捲動的時間就越久，圖片越短則相反。影像則是使用者願意駐足觀看，那該則影像就會被看比較久。</p>
+                <p>但透過把影像或圖像作為背景或sticky-top，我便可以透過指定外部區塊元素height來決定讀者必須在捲動過程花多少時間觀看我這個影片或圖像。這意味著，透過捲動，就如同電影透過在時間軸的剪輯，我可以控制讀者必須要看我指定的內容多久。
+                </p>
+                <p>如下方的四張圖片，內部的區塊均設定為sticky-top，高度則為100vh；外部的區塊則設定為300vh。這意味著原本讀者只需要花100vh來捲過這張圖片，但在這樣的設計下，讀者必須花300vh的捲動來觀看一則圖片
+                </p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+    </section>
+    <!-- section的height可決定要讓讀者看多久 -->
+    <section id="section1" style="height:2000vh;">
+        <div class="sticky-top" style="height:100vh;"></div>
+        <!-- 100vh(viewport height)：跟視窗一樣高 -->
+    </section>
+    <section id="section2" style="height:200vh;">
+        <div class="sticky-top" style="height:100vh;"></div>
+    </section>
+
+    <section id="section3" style="height:1000vh;">
+        <div class="sticky-top" style="height:100vh;"></div>
+    </section>
+
+    <section id="section4" style="height:800vh;">
+        <div class="sticky-top" style="height:100vh;"></div>
+    </section>
+
+    <section style="height:500px;background-color:gray"></section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

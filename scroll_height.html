@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka the Great">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Passero+One">
+
+    <!-- jQuery W3Schools -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- jQuery CDN (Content Delivery Network) -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <title>Scroll Height</title>
+
+    <style>
+        h1 {
+            font-family: "Fredericka the Great", "Lucida Grande", Helvetica, "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="msgbar" class="sticky-top container-fluid bg-white">
+        <h1 id="msg"></h1>
+    </div>
+    <div class="container-fluid bg-info" style="height:100vh">
+    </div>
+
+    <div id="div1" class="container bg-light" style="height:200vh">
+        <h1>Div1 ends here</h1>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <script>
+        // $(document).ready();
+        // $()
+        // $(function() {})
+        $(document).ready(function() {
+            console.log($(document).width());
+            // $("#msg").html("Ready!");
+            let winh = $(window).height();
+            let doch = $(document).height();
+            let div1_pos = $("#div1").offset().top;
+            let div1h = $("#div1").height();
+            $(window).scroll(function() {
+                let log = "Div1 position: " + div1_pos + ";";
+                let current_pos = $(window).scrollTop();
+                log += "\tCurrent position: " + current_pos;
+                $("#msg").html(log);
+            });
+        });
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

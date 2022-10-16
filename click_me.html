@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka the Great">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Passero+One">
+    <!-- jQuery CDN (Content Delivery Network) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <title>Click Me</title>
+
+    <style>
+        button {
+            font-family: "Fredericka the Great";
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="button" type="button" class="btn btn-default btn-lg">Click Me</button>
+    </div>
+    <div class="btn-group">
+        <button id="dog" type="button" class="btn btn-primary btn-lg">Dog</button>
+        <button id="cat" type="button" class="btn btn-warning btn-lg">Cat</button>
+        <button id="cow" type="button" class="btn btn-success btn-lg">Cow</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#button").click(function() {
+                alert("alert!");
+            });
+        });
+        $(function() {
+            $("#dog").click(function() {
+                alert("bark!");
+            });
+            $("#cat").click(function() {
+                alert("meow~");
+            });
+            $("#cow").click(function() {
+                alert("moo~");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

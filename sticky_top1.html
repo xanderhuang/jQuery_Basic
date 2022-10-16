@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Sticky Top</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .jumbotron {
+            margin-bottom: 0px;
+        }
+        
+        #tofix1 {
+            z-index: 99;
+        }
+        
+        #tofix2 {
+            z-index: 98;
+        }
+        
+        .fixed {
+            position: fixed;
+            top: 0;
+        }
+        
+        body {
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div style="height:500px;background-color: dodgerblue;"></div>
+    <div id="tofix1" style="height:100px;background-color: coral;z-index:99; width:100%"></div>
+    <div style="height:500px;background-color: lightgrey;"></div>
+    <div style="height:500px;background-color: white;">
+        <svg id="tofix2" width="250" height="250" style="z-index:100;">
+            <circle cx="100" cy="100" r="100" fill="coral" />
+        </svg>
+        <!-- scalable vector graphics (svg) 可縮放向量圖形 -->
+    </div>
+    <div style="height:100vh;background-color: grey;"></div>
+    <!-- viewport height (vh) -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        let tofix1_pos = $('#tofix1').offset().top; //Reserve the original height
+        let tofix2_pos = $('#tofix2').offset().top; //Reserve the original height
+        // 監控目前視窗捲動到哪裡
+        $(window).scroll(function() {
+            let current_pos = $(window).scrollTop();
+            console.log(current_pos);
+            // if (current_pos > tofix1_pos) {
+            //     $('#tofix1').css('position', 'fixed');
+            //     $('#tofix1').css('top', '0px');
+            // }
+            // 把要更動 CSS 的 sticky-top 功能，設計成一個 Class
+            if (current_pos > tofix1_pos) {
+                $('#tofix1').addClass('fixed');
+            } else {
+                $('#tofix1').removeClass('fixed');
+            }
+
+            if (current_pos > tofix2_pos - 100) {
+                $('#tofix2').addClass('fixed');
+            } else {
+                $('#tofix2').removeClass('fixed');
+            }
+        });
+    </script>
+</body>
+
+</html>
